@@ -8,17 +8,30 @@ function App() {
 
   //let Counter = 15
   const addValue = ()=>{
-    setCounter(Counter+1)
+    //to aaya if muki saki k 20 thi ochhu hoi to j add kare baki na kre
+    if (Counter < 20) {
+      setCounter(Counter+1)
+    }
+    else{
+      // aaya 0 yhi mota mate lakh
+      //e to remove vala ma nai ave??ha sorry       doneee samjai gyu kya haaa
+      alert("Value can't more then 20")
+    }
   }
 
   const RemoveValue = ()=>{
-    setCounter(Counter-1)
-  }
+    if(Counter > 0)
+    {
+      setCounter(Counter-1)
+    }
+  else{
+    alert("value can't less than 0")
+  }  }
   
   return (
     <>
       <h1>chai aur react</h1>
-      <h2>Counter Value:15</h2>
+      <h2>Counter Value:{Counter}</h2>
 
       <button onClick={addValue}>Add Value {Counter}</button>
       <br />
@@ -28,4 +41,4 @@ function App() {
 }
 
 export default App
-//react kya che e folder khol
+//m kidhu k counter ni valuse 20 thi vathdre na hovi joi ready!!haa
